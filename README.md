@@ -90,17 +90,14 @@ curl -X POST "http://localhost:8000/employees/insert" \
   }'
 
 # Delete Employee
-curl -X DELETE "http://localhost:8000/employees/del?indName=employeev3&name=Sneha%20Iyer&dob=1990-04-19&joind=2020-01-25"
+nvoke-WebRequest -Uri "http://localhost:8000/employees/del?indName=employeev3&name=Sneha%20Iyer&dob=1990-04-19&joind=2020-01-25" `
+   -Method DELETE 
 
 # Update Employee
-curl -X PUT "http://localhost:8000/employees/update?indName=employeev3&name=Karan%20Mehta&dob=1987-09-27&joind=2017-07-07" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "data": {
-      "department": "Management",
-      "salary": 85000
-    }
-  }'
+Invoke-WebRequest -Uri "http://localhost:8000/employees/update?indName=employeev3&name=Karan%20Mehta&dob=1987-09-27&joind=2017-07-07" `
+       -Method PUT `   
+       -Body '{"data": {"department": "Management", "salary": 85000}}' `                                                                                         
+        -ContentType "application/json"'
 
 ```
 
