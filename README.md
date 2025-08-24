@@ -101,15 +101,7 @@ curl -X PUT "http://localhost:8000/employees/update?indName=employeev3&name=Kara
       "salary": 85000
     }
   }'
-# Update Employee
-curl -X PUT "http://localhost:8000/employees/update?indName=employeev3&name=Karan%20Mehta&dob=1987-09-27&joind=2017-07-07" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "data": {
-      "department": "Management",
-      "salary": 85000
-    }
-  }'
+
 ```
 
 ### API Routes
